@@ -1,0 +1,14 @@
+.container-fluid
+  .row
+    .col-xs-12
+      %h1 ti&m AG - Trello CSV Converter
+      %br/
+  .row
+    .col-xs-12
+      %h2 Upload Trello Export (JSON)
+  .row
+    .col-xs-12
+      = form_tag({action: :upload}, multipart: true) do
+        = file_field_tag 'file'
+        %br/
+        = submit_tag "Convert", {class: "btn btn-primary"}
