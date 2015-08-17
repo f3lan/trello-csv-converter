@@ -20,10 +20,10 @@ class Converter < ActiveRecord::Base
         row = []
         name = card["name"]
         puts name
-        name.match(/(\[)(\d+\.?\d?)(\/)(\d\.?\d?)(\])(.+)/)
-        row << $6
-        row << $2
-        row << $4
+        name.match(/(\[)(\d+\.?\d?)(\/)(\d?\.?\d?-?)(\])(.+)/)
+        row << $6.strip
+        row << $2.strip
+        row << $4.strip
         json["lists"].each do |list|
           if list["id"] == card["idList"]
             row << list["name"]
