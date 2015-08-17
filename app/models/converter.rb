@@ -18,18 +18,26 @@ class Converter < ActiveRecord::Base
       csv << ["Story Name", "Est. Time", "Used Time", "List Name"]
       json["cards"].each do |card|
         row = []
+        list_name = ""
         name = card["name"]
         puts name
         name.match(/(\[)(\d+\.?\d?)(\/)(\d?\.?\d?-?)(\])(.+)/)
+        puts $6
+        puts $2
+        puts $4
         row << $6.strip
         row << $2.strip
         row << $4.strip
         json["lists"].each do |list|
           if list["id"] == card["idList"]
-            row << list["name"]
+            list_name = list["name"]
+            puts list_name
           end
         end
-        csv << row
+        if list_name != "Impendence" || list_name != "Technical Debts"
+          row << list_name
+          csv << row
+        end
       end
     end
     csv_string
