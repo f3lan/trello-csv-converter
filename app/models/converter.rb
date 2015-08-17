@@ -17,7 +17,6 @@ class Converter < ActiveRecord::Base
     csv_string = CSV.generate do |csv|
       csv << ["Story Name", "Est. Time", "Used Time", "List Name"]
       json["cards"].each do |card|
-        puts card
 
         row = []
         list_name = ""
@@ -47,8 +46,3 @@ class Converter < ActiveRecord::Base
   end
 
 end
-
-#csv_string = CSV.generate do |csv|
-#  file = File.open("trello.board.json").read
-#
-#puts csv_string
