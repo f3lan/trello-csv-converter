@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails Applicaiton to convert the [Trello](https://trello.com/) json export into a usufull CSV file. This can be used for Scrum burn down charts.
 
-Things you may want to cover:
+ 
+=== Ruby version
+The ruby version is 2.2.2
 
-* Ruby version
+=== Website
 
-* System dependencies
+You can find the app up and running on heroku: (http://ti8m-trello.heroku.com/)
 
-* Configuration
+=== Usage
 
-* Database creation
+1. Go to you Trello board.
+2. Download the json file.
+3. Go the the converter app on heroku: (http://ti8m-trello.heroku.com/)
+4. Upload the json file.
+5. You get the csv file back.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== Contributors
+* ti8m.ch/Felix Langenegger
