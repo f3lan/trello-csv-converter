@@ -1,6 +1,6 @@
 == README
 
-A simple Rails Applicaiton to convert the [Trello](https://trello.com/) json export into a usufull CSV file. This can be used for Scrum burn down charts.
+A simple Rails Applicaiton to convert the Trello (https://trello.com/) json export into a usufull CSV file. This can be used for Scrum burn down charts.
 
  
 === Ruby version
@@ -20,3 +20,5 @@ You can find the app up and running on heroku: (http://ti8m-trello.heroku.com/)
 
 === Contributors
 * ti8m.ch/Felix Langenegger
+
+[Visit GitHub!](https://www.github.com)
